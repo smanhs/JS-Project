@@ -1,19 +1,21 @@
 import express from "express";
 
+const authRoutes = express.Router(); // <-- CALL the function with ()
 
-const authRoutes=express.Router;
+authRoutes.post("/register", (req, res) => {
+  res.send("Register route hit!");
+});
 
-authRoutes.post("/regsiter")
+authRoutes.post("/login", (req, res) => {
+  res.send("Login route hit!");
+});
 
-authRoutes.post("/login")
+authRoutes.post("/logout", (req, res) => {
+  res.send("Logout route hit!");
+});
 
-authRoutes.post("/logout")
-authRoutes.post("/check")
-
-
-
-
-
+authRoutes.post("/check", (req, res) => {
+  res.send("Check route hit!");
+});
 
 export default authRoutes;
-
